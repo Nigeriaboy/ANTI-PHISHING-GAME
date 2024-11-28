@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>my flask app</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-</head>
-<body>
-    <p>Hello world!</p>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anti-Phishing Awareness Game</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>    
+    <body>
+        <!-- Loader -->
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+        </div>
+    
+        <!-- Main Content -->
+        <div id="main-content" style="display: none;">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="logo">Anti-Phishing Game</a>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Why Play</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to the Anti-Phishing Game</h1>
+                    <p>Test your ability to spot phishing attempts and learn how to stay safe online.</p>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            </header>
+    
+            <!-- Features Section -->
+            <section id="features" class="features">
+                <h2>Why Play?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3>Interactive Scenarios</h3>
+                        <p>Experience real-life email situations to test your skills.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Immediate Feedback</h3>
+                        <p>Learn why an email is legitimate or a phishing attempt instantly.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Build Awareness</h3>
+                        <p>Enhance your ability to recognize phishing red flags.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2024 Anti-Phishing Game. Stay Safe Online.</p>
+            </footer>
+        </div>
+        <script>
+            window.onload = function () {
+                const loader = document.getElementById('loader');
+                const mainContent = document.getElementById('main-content');
+        
+                // delay to simulate loading
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 2000); //2 seconds delay
+            };
+        </script>
+        
+        
+    </body>
+    
 </html>
