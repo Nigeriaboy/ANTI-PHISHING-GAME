@@ -36,6 +36,15 @@
                     <a href="{{ url_for('game_page') }}" class="btn">Get Started</a>
                 </div>
             </header>
+
+            <!-- scoring section -->
+            <section id="scoring-system" class="scoring-system">
+                <h2>Scoring System</h2>
+                <p class="score-display">Score: <span id="score">0</span></p>
+                <button class="correct" onclick="updateScore(true)">Correct Answer</button>
+                <button class="incorrect" onclick="updateScore(false)">Incorrect Answer</button>
+                <button class="reset" onclick="resetScore()">Reset Score</button>
+            </section>
     
             <!-- Features Section -->
             <section id="features" class="features">
@@ -72,6 +81,29 @@
                     mainContent.style.display = 'block';
                 }, 2000); //2 seconds delay
             };
+
+            // Initialize score
+            let score = 0;
+
+            // Update the score dynamically
+            function updateScore(isCorrect) {
+                if (isCorrect) {
+                    score++; // Increment score for correct answers
+                }
+                displayScore(); // Update the score display
+            }
+
+            // Reset the score
+            function resetScore() {
+                score = 0; // Set score to 0
+                displayScore(); // Update the score display
+            }
+
+            // Display the updated score on the page
+            function displayScore() {
+                const scoreElement = document.getElementById("score");
+                scoreElement.textContent = score; // Update score dynamically
+            }
         </script>
         
         
