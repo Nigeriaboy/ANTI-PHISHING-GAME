@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Game</title>
+</head>
+<body>
+    <!--Main Content-->
+    <div id="main-content" style="display: block;">
+        <!-- Navbar -->
+         <nav class="navbar">
+            <div class="container" style="text-align: center;">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="#features">Why Play</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+         </nav>
+
+         <!--scoring section-->
+         <div id="score_section">
+            <h4 id="score">SCORE:</h4>
+         </div>
+    </div>
+</body>
+</html>
