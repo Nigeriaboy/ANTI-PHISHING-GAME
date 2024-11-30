@@ -122,6 +122,44 @@ body {
     color: #fff;
 }
 
+/* scoring system */
+.scoring-system {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.scoring-system .score-display {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.scoring-system button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.scoring-system button.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.scoring-system button.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+.scoring-system button.reset {
+    background-color: #007bff;
+    color: white;
+}
+
+.scoring-system button:hover {
+    opacity: 0.9;
+}
+
+
 
 /* Features Section */
 .features {
