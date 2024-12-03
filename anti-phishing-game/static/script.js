@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function restartGame() {
         await fetch('/restart', { method: 'POST' }); // Send a request to restart scenarios
         feedbackElem.textContent = ''; // Clear feedback
-        fetchNextScenario(); // Fetch the first scenario after restart
+        fetchNextScenario(); // Fetch the first scenario after system restart
     }
 
     document.getElementById("phish-btn").addEventListener("click", async () => {
