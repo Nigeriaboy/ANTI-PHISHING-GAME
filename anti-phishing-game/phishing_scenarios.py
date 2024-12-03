@@ -68,6 +68,63 @@ def delete_scenario(scenario_id):
         ''', (scenario_id,))
         conn.commit()
 
+
+# Add a new column for tracking completed scenarios
+def add_completed_column():
+    with connect_to_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''ALTER TABLE scenarios ADD COLUMN completed INTEGER DEFAULT 0''')
+        conn.commit()
+
+# Fetch the next uncompleted scenario based on the user's progress
+def get_next_scenario():
+    with connect_to_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM scenarios WHERE completed = 0 ORDER BY id ASC LIMIT 1')
+        next_scenario = cursor.fetchone()
+    return next_scenario
+
+# Mark a scenario as completed
+def mark_scenario_completed(scenario_id):
+    with connect_to_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute('UPDATE scenarios SET completed = 1 WHERE id = ?', (scenario_id,))
+        conn.commit()
+
+
+ # Logic to load the next scenario and handle user interaction
+def load_next_scenario(user_choice):
+    # Get the next scenario that hasn't been completed
+    next_scenario = get_next_scenario()
+    if next_scenario:
+        print(f"Scenario: {next_scenario[2]}")  # For example, the subject
+        print(next_scenario[3])  # Displaying the body of the email
+        print("\nPlease select your answer (Phish/Legit): ")
+        
+        # Here the user would input their choice
+        if user_choice.lower() == next_scenario[5].lower():  # Correct answer based on the 'answer' column
+            feedback = "Correct! Good job."
+        else:
+            feedback = "Incorrect. Try again."
+        
+        # Provide feedback to the user
+        print(feedback)
+        
+        # After user interaction, mark the scenario as completed
+        mark_scenario_completed(next_scenario[0])
+
+    else:
+        print("All scenarios have been completed.")
+
+        # Example usage
+if __name__ == '__main__':
+    add_completed_column()  # Add the 'completed' column if it doesn't exist
+
+
+
+
+
+
 # Export data to CSV
 def export_to_csv(file_name='phishing_scenarios.csv'):
     with connect_to_db() as conn:

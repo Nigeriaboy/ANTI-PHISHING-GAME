@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Phishing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Anti-Phishing Game</h1>
+        <div id="scenario">
+            <h2 id="subject">Loading...</h2>
+            <p id="body"></p>
+            <p id="from-email"></p>  <!-- Added for displaying the 'From' email -->
+        </div>
+        
+        <div class="actions">
+            <button id="phish-btn">Phish</button>
+            <button id="legit-btn">Legit</button>
+        </div>
+        <button id="restart-btn">Restart</button> <!-- Add Restart Button -->
+        <p id="feedback"></p>
+    </div>
+</body>
+</html>
