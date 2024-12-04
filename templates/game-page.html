@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css')}}">
+    <title>Anti-Phish Game</title>
+</head>
+<body>
+    <!--Main Content-->
+    <div id="main-content" style="display: block;">
+        <!-- Navbar -->
+         <nav class="navbar">
+            <div class="container"  style="text-align: center">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="#features">Why Play</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+         </nav>
+
+        <!-- scoring section -->
+        <div id="score"><span class="correct"> Correct: 0 </span> <span class="incorrect">Incorrect: 0 </span></div>
+        <div class="game_box">
+            <h1 style="text-align: center;">Anti-Phish Game</h1>
+            <div class="image" id="image"></div>
+            <div class="scenario" id="scenario"></div>
+            <div class="buttons">
+            <button id="phishBtn">Phish</button>
+            <button id="legitBtn">Legit</button>
+            </div>
+            <p id="feedback"></p>
+            <p id="explanation"></p>
+        </div>
+        <script src="static/scenario.js"></script>
+        <script src="static/app.js"></script>
+
+</body>
+</html>

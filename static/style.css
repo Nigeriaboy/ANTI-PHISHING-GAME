@@ -75,6 +75,13 @@ body {
     gap: 20px;
 }
 
+.nav-links{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
 .navbar .nav-links li {
     display: inline;
 }
