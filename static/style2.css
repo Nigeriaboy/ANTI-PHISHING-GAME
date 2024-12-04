@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.game_score {
+  margin-top: 50px;
+}
+
+.scenario {
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.correct{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.incorrect{
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.img{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#phishBtn {
+  background-color: red;
+  color: white;
+}
+
+#legitBtn {
+  background-color: blue;
+  color: white;
+}
+
+#feedback {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#explanation {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  color: #555;
+}
+
+
