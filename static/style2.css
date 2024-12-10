@@ -1,19 +1,136 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
-#score {
-  position: absolute;
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: sticky;
   top: 10px;
-  left: 10px;
-  font-size: 16px;
+  z-index: 1000;
+}
+
+/* Loader */
+/* Loader Styles */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #4facfe;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+#nav-links {
+  justify-content: right;
+  margin-right: 50px;
+}
+
+#nav-links a:hover:not(.dropdown-content a) {
+  color: white;
+  background-color: #4facfe;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+
+#nav-links a:not(.dropdown-content a) {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white; 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 110;
+  margin-top: 8px;
+  padding: 10px;
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  color: #4facfe;
+}
+
+.dropdown-content > a{
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.dropdown-content > a:hover{
+  color: #92c8f8;
+}
+
+
+/** Scoring section**/
+#score {
+  margin-top: 30px;
   font-weight: bold;
-  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+#score > span {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .game_score {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .scenario {
@@ -22,19 +139,20 @@ body {
   text-align: center;
 }
 
-.correct{
-  background-color: green;
+#correct{
+  background-color: rgb(29, 201, 57);
   color: white;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 5px 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
 }
 
-.incorrect{
+#incorrect{
   background-color: red;
   color: white;
-  padding: 10px;
-  border-radius: 10px;
-  margin-left: 10px;
+  padding: 5px 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
 }
 
 .image {
@@ -44,6 +162,16 @@ body {
 
 .img{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: auto;
+}
+
+/** Make the image responsive on smaller screen**/
+@media (max-width: 768px) {
+  .img {
+    width: 90%;
+    height: auto;
+  }
 }
 
 
@@ -59,6 +187,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 #phishBtn {
@@ -66,15 +195,36 @@ button {
   color: white;
 }
 
+#phishBtn:hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 #legitBtn {
-  background-color: blue;
+  background-color: rgb(29, 201, 57);
   color: white;
+}
+
+#legitBtn:hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 #feedback {
   font-size: 18px;
   margin-top: 20px;
-  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.wrongdiv {
+  margin-left: 10px;
+}
+
+.correct {
+  width: 30px
+}
+.wrong {
+  width: 30px;
 }
 
 #explanation {
@@ -82,6 +232,24 @@ button {
   margin-top: 10px;
   text-align: center;
   color: #555;
+}
+
+#next {
+  margin-top: 10px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.next-button {
+  font-size: 13px;
+  background-color: #4facfe;
+  color: white;
+  font-weight: bold;
+}
+
+#stat-of-email {
+  text-align: center;
+  font-size: 10px;
 }
 
 

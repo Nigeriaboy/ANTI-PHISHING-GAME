@@ -72,29 +72,66 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
-.nav-links{
-    position: absolute;
-    right: 0;
-    top: 30%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-}
+
 .navbar .nav-links li {
     display: inline;
 }
 
-.navbar .nav-links a {
+.nav-links > li > a:not(.dropdown-content a) {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.nav-links > li > a:hover:not(.dropdown-content a) {
+    color: white;
+    background-color: #4facfe;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.nav-links > li > a:focus-within {
+    color: white;
+    background-color: #4facfe;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 110;
+    margin-top: 8px;
+    padding: 10px;
+  }
+  
+  .dropdown:focus-within .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    color: #4facfe;
+  }
+  
+  .dropdown-content > a{
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
-}
-
-.navbar .nav-links a:hover {
-    color: #4facfe;
-}
+  }
+  
+  .dropdown-content > a:hover{
+    color: #92c8f8;
+  }
+  
 
 /* Hero Section */
 .hero {
