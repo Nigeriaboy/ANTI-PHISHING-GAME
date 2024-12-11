@@ -23,9 +23,11 @@ function loadScenario()
   if (currentScenarioIndex >= randomizedScenarios.length) {
     document.getElementById("scenario").textContent = "Game Over!";
     document.getElementById("image").innerHTML = "";
-    document.getElementById("buttons").style.display = "none";
-    document.getElementById("feedback").textContent = `Final Score: Correct: ${correctAnswers}, Incorrect: ${incorrectAnswers}`;
-    document.getElementById("explanation").textContent = "";
+    document.getElementById("feedback").innerHTML = `Final Score:   <span id="correct-design">Correct: ${correctAnswers}</span>
+    ,   <span id="incorrect-design">Incorrect: ${incorrectAnswers}</span>`;
+    document.getElementById("explanation").style.display = "none";
+    document.getElementById("stat-of-email").style.display = "none";
+    document.getElementById("next").style.display = "none";
     return; 
   }
   
@@ -40,7 +42,6 @@ function loadScenario()
   document.getElementById("feedback").textContent = "";
   document.getElementById("stat-of-email").textContent = "";
   document.getElementById("explanation").textContent = "";
-
 }
 
 function handleSelection(userChoice) 

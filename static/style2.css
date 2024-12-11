@@ -210,11 +210,24 @@ button {
 }
 
 #feedback {
+  color: black;
   font-size: 18px;
   margin-top: 20px;
   justify-content: center;
   display: flex;
+} 
+
+#correct-design {
+  color: rgb(29, 201, 57);
+  margin-left: 3PX;
 }
+
+#incorrect-design {
+  color: red;
+  margin-left: 3PX;
+}
+
+
 
 .wrongdiv {
   margin-left: 10px;
