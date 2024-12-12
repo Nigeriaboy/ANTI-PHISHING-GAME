@@ -46,7 +46,17 @@ Each phishing scenario includes an educational tip, helping users understand the
 <p>Thanks to Projectstake academy for guiding us this far.</p>
 <p>Thanks to the FORGE TEAM for making this happen:</p>
 <ul>
-  <li><a href="https://github.com/ceasermikes002">CHIMA</li>
+  <li><a href="https://github.com/ceasermikes002">CHIMA</a></li>
+  <li><a href="https://github.com/Siddami">SIDIQAT</a></li>
+  <li><a href="https://github.com/Nigeriaboy">ABDULLAH</a></li>
+  <li><a href="https://github.com/virus-200">DARA</a></li>
+</ul>
+
+<h2>FUTURE IMPROVEMENT</h2>
+<ul>
+  <li>Add more email scenarios.</li>
+  <li>Write a user guide that will guide the player before playing the game.</li>
+  <li>Add a leaderboard for competitive play</li>
 </ul>
 
 <h2>LICENSE</h2>
