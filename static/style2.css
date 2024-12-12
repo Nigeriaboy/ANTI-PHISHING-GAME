@@ -265,4 +265,47 @@ button {
   font-size: 10px;
 }
 
+.report-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.report-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.report-container h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.report-item {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.scenario-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
 
