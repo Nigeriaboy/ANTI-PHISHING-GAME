@@ -17,7 +17,7 @@ You will be provided with a local host link, something similar to this (http://l
 Click it and start Identifying the phish attempt email scenarios.
 
 <h2>Features</h2>
-<p>Our project, Anti-Phish Game, includes the following exciting features:</p>
+<p>Our project, PHISH_GUARD, includes the following exciting features:</p>
 <ul>
 <li>INTERACTIVE PHISHING SCENARIOS:</li>
 Players are presented with realistic email scenarios to identify phishing attempts, simulating real-world challenges.
@@ -41,9 +41,9 @@ Each phishing scenario includes an educational tip, helping users understand the
   <li>PYTHON(FLASK)</li>
 </ul>
 
-<h2>ACKNOWLEDGMEN</h2>
+<h2>ACKNOWLEDGMENT</h2>
 <p>Thanks to CS50 for inspiration.</p>
-<p>Thanks to Projectstake academy for guiding us this far.</p>
+<p>Thanks to Projectstake Academy for guiding us this far.</p>
 <p>Thanks to the FORGE TEAM for making this happen:</p>
 <ul>
   <li><a href="https://github.com/ceasermikes002">CHIMA</a></li>
